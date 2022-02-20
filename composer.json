@@ -1,0 +1,6 @@
+{
+    "name": "company/wp-contact-form",
+    "description": "Contact Form",
+    "type": "wordpress-plugin",
+    "require": {}
+}

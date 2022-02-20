@@ -1,0 +1,20 @@
+$breakpoints: xs 360px,
+sm 640px,
+md 768px,
+lg 1024px,
+xl 1280px,
+2 xl 1440px,
+3 xl 1680px,
+hd 1920px;
+
+@mixin breakpoint($point) {
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $size: nth($breakpoint, 2);
+    @if $point==$name {
+      @media (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
